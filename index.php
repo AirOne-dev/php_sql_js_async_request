@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 
 <div id='vehicle_container'></div>
 
-<button onclick='get_page_content("prev")'>Précédent</button>
-<button onclick='get_page_content("next")'>Suivant</button><br />
+<button id='prev'>Précédent</button>
+<button id='next'>Suivant</button><br />
+
+<script src="script.js"></script>
