@@ -4,11 +4,11 @@ let p = 1;
 
 function get_page_content(action) {
     if(action == 'next')
-    p++;
+        p++;
     else if(action == 'prev')
-    p--;
+        p--;
     else
-    p = 1;
+        p = 1;
     
     fetch('./pages.php?p=' + p).then(function (response) {
         return response.text();
