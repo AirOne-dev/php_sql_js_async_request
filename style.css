@@ -1,0 +1,12 @@
+table {
+    border: solid 2px black;
+    border-collapse: collapse;
+    margin: 20px;
+}
+td {
+    border: solid 1px black;
+}
+#vehicle_container {
+    display: flex;
+    flex-flow: wrap;
+}
