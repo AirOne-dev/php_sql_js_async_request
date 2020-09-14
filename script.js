@@ -23,7 +23,5 @@ function get_page_content(action) {
     });
 }
 
-get_page_content('current');
-
 document.querySelector('button#prev').addEventListener("click", function() { get_page_content('prev'); });
 document.querySelector('button#next').addEventListener("click", function() { get_page_content('next'); });
