@@ -10,6 +10,9 @@ function get_page_content(action) {
     else
         p = 1;
     
+    document.querySelector('#vehicle_container').innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif'></img>";
+    // met un gif de chargement dans la div '#vehicle_container'
+    
     fetch('./pages.php?p=' + p).then(function (response) {
         return response.text();
     }).then(function (html) {
