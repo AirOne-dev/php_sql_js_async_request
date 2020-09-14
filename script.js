@@ -10,11 +10,10 @@ function get_page_content(action) {
     else
         p = 1;
     
+    document.querySelector('#vehicle_container').innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif'></img>";
+    
     setTimeout(function(){ 
-        document.querySelector('#vehicle_container').innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif'></img>";
-        // met un gif de chargement dans la div '#vehicle_container'
-    }, 1000).then(function() {
-  
+        
         fetch('./pages.php?p=' + p).then(function (response) {
             return response.text();
         }).then(function (html) {
@@ -27,7 +26,7 @@ function get_page_content(action) {
             console.warn('Something went wrong.', err);
         });
     });
-}
+    }, 1000);
 
 document.querySelector('button#prev').addEventListener("click", function() { get_page_content('prev'); });
 document.querySelector('button#next').addEventListener("click", function() { get_page_content('next'); });
